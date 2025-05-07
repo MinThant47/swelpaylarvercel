@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Clash Display Fonts */
+
+@font-face {
+  font-family: "ClashDisplay-Bold";
+  src: url("../fonts/ClashDisplay-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("../fonts/ClashDisplay-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("../fonts/ClashDisplay-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("../fonts/ClashDisplay-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ClashDisplay-Light";
+  src: url("../fonts/ClashDisplay-Light.otf") format("opentype");
+}
+
+/* Clash Display Fonts End */
+
+* {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: #111111;
+  background-image: url("./Assets/Background\ Black.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  
+}
+
+li {
+  color: white;
+}
+
+.btn {
+  @apply cursor-pointer py-2 px-4 bg-primary-100 text-white font-clashMedium rounded-lg shadow-md hover:bg-primary-900  transition ease-in-out;
+}
+
+.btn2 {
+  @apply cursor-pointer py-2 px-12 bg-primary-100 text-white font-clashMedium rounded-lg shadow-md hover:bg-primary-900  transition ease-in-out;
+}
+
+.btn-rounded {
+  @apply cursor-pointer py-2 px-4 text-primary-100 font-semibold rounded-full shadow-md border-2 hover:bg-primary-100 hover:text-white border-primary-100  transition ease-in-out;
+}
+
+.card {
+  width: 250px;
+}
+
+.imgWrapper {
+  height: 250px;
+  overflow: hidden;
+}
+
+.imgCard {
+  height: 300px;
+  @apply object-cover hover:transform-gpu hover:scale-110 cursor-pointer overflow-hidden transition ease-in-out duration-300;
+}
+
+.imgCard2 {
+  @apply object-cover hover:transform-gpu hover:scale-110 cursor-pointer overflow-hidden transition ease-in-out duration-300;
+}
+
+.modal-container {
+  max-width: 650px;
+  max-height: 650px;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 7px;
+}
+/* webkit scrollbar thumb is the part of the scrollbar which we hold to scroll  */
+::-webkit-scrollbar-thumb {
+  background: #606060;
+  /* we got the background now lets make it round */
+  border-radius: 100px;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: 270px;
+  }
+
+  .imgWrapper {
+    height: 220px;
+    overflow: hidden;
+  }
+}
+
+.skeleton {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+@media (max-width: 620px) {
+  .skeleton {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 380px) {
+  .skeleton {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+}
+
+SELECT {
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23FFFFFF' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+    no-repeat;
+  background-position: calc(100% - 1rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+}
+
+
+
+/* Markdown styling */
+.markdown-content {
+  color: inherit;
+}
+
+.markdown-content a {
+  color: #f7941d;
+  text-decoration: underline;
+}
+
+.markdown-content strong {
+  color: white;
+  font-weight: 600;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  color: white;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.markdown-content h1 {
+  font-size: 1.5em;
+}
+
+.markdown-content h2 {
+  font-size: 1.3em;
+}
+
+.markdown-content h3 {
+  font-size: 1.1em;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  
+}
+
+.markdown-content ul li {
+  list-style-type: disc;
+}
+
+.markdown-content ol {
+  list-style-type: decimal ;
+}
+
+
+.markdown-content li {
+  @apply list-inside;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.markdown-content li ::marker {
+  color: #ffffff; /* Orange color to match your theme */
+  font-size: 1.2em; /* Slightly larger marker */
+}
+
+/* Nested lists */
+.markdown-content li > ul,
+.markdown-content li > ol {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid #f7941d;
+  padding-left: 1em;
+  font-style: italic;
+  margin: 0.5em 0;
+}
+
+.markdown-content pre {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.75em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+
+.markdown-content code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.markdown-content hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 1em 0;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5em;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@layer base{
+  ul, ol{
+    list-style-type: disc;
+  }
+}
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.loading-dot {
+  animation: bounce 1s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
