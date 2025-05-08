@@ -9,8 +9,8 @@ import { Redis } from "@upstash/redis"
 import ReactMarkdown from "react-markdown"
 
 const redis = new Redis({
-  url: process.env.REDIS_URL,
-  token: process.env.REDIS_PW,
+  url: process.env.NEXT_PUBLIC_REACT_APP_REDIS_URL,
+  token: process.env.NEXT_PUBLIC_REACT_APP_REDIS_PW,
 })
 
 const ChatPage = () => {
