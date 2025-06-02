@@ -53,8 +53,8 @@ const ChatPage = () => {
     setMessage("")
 
     try {
-      // const response = await fetch("https://swelpaylar-api-production.up.railway.app/generate", {
-      const response = await fetch("https://swelpaylar-api.onrender.com/generate", {
+      const response = await fetch("https://swelpaylar-api-production.up.railway.app/generate", {
+      // const response = await fetch("https://swelpaylar-api.onrender.com/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
